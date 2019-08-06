@@ -1,0 +1,26 @@
+{
+  "name": "unit-testing-and-test-driven-development-in-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravi-kumar-yadav/mocha-chai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravi-kumar-yadav/mocha-chai/issues"
+  },
+  "homepage": "https://github.com/ravi-kumar-yadav/mocha-chai#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
