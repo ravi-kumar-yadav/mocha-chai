@@ -10,6 +10,10 @@ module.exports = class Checkout {
     }
 
     addItem(item) {
+        if (!(item in this.prices)) {
+            throw('No price defined for item ' + item);
+        }
+
         if (item in this.items) {
             this.items[item]++;
         } else {

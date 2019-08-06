@@ -51,3 +51,8 @@ it('Can apply discount rules to the total', function (){
     checkout.addItem('Apple');
     expect(checkout.calculateTotal()).to.equal(300);
 });
+
+// Exception is thrown for item added without price
+it('Throws an Exception when item added with no price', function (){
+    expect(function() {checkout.addItem('Mango')}).to.throw();
+});
