@@ -21,6 +21,9 @@
   "homepage": "https://github.com/ravi-kumar-yadav/mocha-chai#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "request": "^2.88.0",
+    "sinon": "^7.4.1",
+    "sinon-chai": "^3.3.0"
   }
 }
