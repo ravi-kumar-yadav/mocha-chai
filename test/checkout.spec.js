@@ -41,3 +41,13 @@ it('Can add multiple items and get correct total', function (){
 it('Can add discount rules', function (){
     checkout.addDiscount('Apple', 2, 50);
 });
+
+// Can apply discount rules to the total
+it('Can apply discount rules to the total', function (){
+    checkout.addDiscount('Apple', 3, 200);
+    checkout.addItem('Apple');
+    checkout.addItem('Apple');
+    checkout.addItem('Apple');
+    checkout.addItem('Apple');
+    expect(checkout.calculateTotal()).to.equal(300);
+});
