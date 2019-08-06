@@ -17,3 +17,9 @@ var Checkout = require('../checkout');
 it('Can instantiate checkout', function () {
     var checkout = new Checkout();
 });
+
+it('Can add an item price', function () {
+    var checkout = new Checkout();
+
+    checkout.addItemPrice('Apple', 100);
+});
