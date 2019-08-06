@@ -14,6 +14,7 @@ var Checkout = require('../checkout');
     -   Exception is thrown for item added without price
 */
 
+
 it('Can instantiate checkout', function () {
     var checkout = new Checkout();
 });
@@ -22,4 +23,11 @@ it('Can add an item price', function () {
     var checkout = new Checkout();
 
     checkout.addItemPrice('Apple', 100);
+});
+
+it('Can add an item', function () {
+    var checkout = new Checkout();
+
+    checkout.addItemPrice('Apple', 100);
+    checkout.addItemPrice('Apple');
 });
