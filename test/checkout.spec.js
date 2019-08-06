@@ -18,22 +18,26 @@ var checkout;
 
 beforeEach(function (){
     checkout = new Checkout();
-});
-
-// Can add an item price
-it('Can add an item price', function () {
     checkout.addItemPrice('Apple', 100);
-});
-
-// Can add an item
-it('Can add an item', function () {
-    checkout.addItemPrice('Apple', 100);
-    checkout.addItemPrice('Apple');
+    checkout.addItemPrice('Grape', 120);    
 });
 
 //Can calculate the current total
 it('Can calculate the current total', function (){
-    checkout.addItemPrice('Apple', 100);
     checkout.addItem('Apple');
     expect(checkout.calculateTotal()).to.equal(100);
+});
+
+// Can add multiple items and get correct total
+it('Can add multiple items and get correct total', function (){
+    checkout.addItem('Apple');
+    checkout.addItem('Grape');
+
+    expect(checkout.calculateTotal()).to.equal(220);
+});
+
+
+// Can add discount rules
+it('Can add discount rules', function (){
+    checkout.addDiscount('Apple', 2, 50);
 });
